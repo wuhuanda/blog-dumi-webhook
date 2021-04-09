@@ -1,5 +1,5 @@
 #!/bin/bash
-WORK_PATH='/workplace/blog'
+WORK_PATH='/workplace/blog-dumi'
 cd $WORK_PATH
 echo "清理代码"
 git reset --hard origin/master
