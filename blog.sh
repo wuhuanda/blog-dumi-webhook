@@ -6,8 +6,12 @@ git reset --hard origin/master
 git clean -f
 echo "拉取最新代码"
 git pull origin master
+echo "移除依赖"
+rm -rf node_modules
+echo "安装最新依赖"
+yarn install
 echo "打包最新代码"
-npm run build
+yarn run build
 echo "开始构建镜像"
 docker build -t blog:1.0
 echo "删除旧容器"
